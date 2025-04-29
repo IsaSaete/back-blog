@@ -3,7 +3,7 @@ import app from "../app.js";
 
 describe("Given a GET/ endpoint", () => {
   describe("When it receives a request", () => {
-    test("Then it should respond with a 200 status code and 'pong' message", async () => {
+    test("Then it should show a response with a 200 status code and 'pong' message", async () => {
       const expectedStatus = 200;
       const expectedMessage = "pong";
 
