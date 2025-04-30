@@ -1,5 +1,5 @@
-import { debug } from "console";
 import mongoose from "mongoose";
+import debug from "debug";
 
 const connectToDatabase = async (connectionString: string): Promise<void> => {
   try {
