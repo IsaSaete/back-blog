@@ -21,7 +21,7 @@ export interface GetResponseBody {
   postsTotal: number;
 }
 
-export interface AddResponsBody {
+export interface ResponseBodyPost {
   post: PostStructure;
 }
 

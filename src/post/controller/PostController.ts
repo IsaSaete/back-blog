@@ -94,7 +94,7 @@ class PostController implements PostControllerStructure {
     const idLength = 24;
 
     if (postId.length !== idLength) {
-      const error = new ServerError(406, "Id not valid");
+      const error = new ServerError(400, "Id not valid");
       next(error);
 
       return;
