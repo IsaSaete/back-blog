@@ -16,7 +16,15 @@ export type PostData = Omit<PostStructure, "_id" | "publishDate" | "tags"> & {
   tags?: string | string[];
 };
 
-export interface ResponseBody {
+export interface GetResponseBody {
   posts: PostStructure[];
   postsTotal: number;
+}
+
+export interface AddResponsBody {
+  post: PostStructure;
+}
+
+export interface ResponseBodyError {
+  error: string;
 }
