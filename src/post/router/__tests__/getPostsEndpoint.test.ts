@@ -5,7 +5,7 @@ import connectToDatabase from "../../../database/connectToDatabase.js";
 import Post from "../../model/Post.js";
 import { luffyBentoPost, sailorMoonCurryPanPost } from "../../fixtures.js";
 import app from "../../../server/app.js";
-import { ResponseBody } from "../../types.js";
+import { GetResponseBody } from "../../types.js";
 
 let server: MongoMemoryServer;
 
@@ -23,7 +23,7 @@ afterAll(async () => {
 });
 
 describe("Given the GET /posts enpoint", () => {
-  describe("When it receives a resquest", () => {
+  describe("When it receives a request", () => {
     test("Then it should respond with a 200 status code and Curry-pan al estilo Sailor Moon 🌙 and Bentō pirata: la receta favorita de Luffy 🏴‍☠️ posts and a total of 2 posts", async () => {
       const expectedStatus = 200;
       const expectedPostsTotal = 2;
@@ -31,7 +31,7 @@ describe("Given the GET /posts enpoint", () => {
       await Post.create(sailorMoonCurryPanPost, luffyBentoPost);
 
       const response = await request(app).get("/posts");
-      const body = response.body as ResponseBody;
+      const body = response.body as GetResponseBody;
 
       expect(response.status).toBe(expectedStatus);
 
