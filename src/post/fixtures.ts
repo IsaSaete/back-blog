@@ -1,7 +1,7 @@
 import { PostStructure } from "./types.js";
 
 export const sailorMoonCurryPanPost: PostStructure = {
-  _id: "1",
+  _id: "680d4b3e7a949d9fe3199b45",
   author: "Sailor Chef Luna",
   content:
     "¿Alguna vez te has preguntado cómo sería probar los deliciosos curry-pan que Usagi devora en Sailor Moon? Hoy te cuento cómo prepararlos en casa con ese toque mágico de la luna.",
@@ -10,7 +10,7 @@ export const sailorMoonCurryPanPost: PostStructure = {
   publishDate: new Date("2025-04-23"),
   tags: ["sailormoon", "curry", "comidaanime"],
   title: "Curry-pan al estilo Sailor Moon 🌙",
-  smallImageUrl: "",
+  smallImageUrl: "https://peque-example.com/sailor-curry-pan.jpg",
   detailImageUrl: "",
 };
 
@@ -24,7 +24,7 @@ export const luffyBentoPost: PostStructure = {
   publishDate: new Date("2025-04-21"),
   tags: ["onepiece", "bento", "animefood"],
   title: "Bentō pirata: la receta favorita de Luffy 🏴‍☠️",
-  smallImageUrl: "",
+  smallImageUrl: "https://peque-example.com/onepiece-bento.jpg",
   detailImageUrl: "",
 };
 

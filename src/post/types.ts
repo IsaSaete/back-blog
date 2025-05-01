@@ -15,3 +15,8 @@ export type PostData = Omit<PostStructure, "_id" | "publishDate" | "tags"> & {
   publishDate?: string;
   tags?: string | string[];
 };
+
+export interface ResponseBody {
+  posts: PostStructure[];
+  postsTotal: number;
+}
