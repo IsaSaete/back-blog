@@ -70,8 +70,8 @@ describe("Given the deletePost method of PostController", () => {
       }),
     };
 
-    test("Then it should call the received next method with 406 'Id not valid' error", async () => {
-      const error = new ServerError(406, "Id not valid");
+    test("Then it should call the received next method with 400 'Id not valid' error", async () => {
+      const error = new ServerError(400, "Id not valid");
       const postController = new PostController(
         postModel as Model<PostStructure>,
       );
@@ -86,9 +86,9 @@ describe("Given the deletePost method of PostController", () => {
     });
   });
 
-  describe("When it receives a request with La croqueta de la abuela Post id that is not in the database", () => {
+  describe("When it receives a request with 11111111111111111111111 id that is not in the database", () => {
     const req = {
-      params: { postId: "croquetas666delaabuela66" },
+      params: { postId: "111111111111111111111111" },
     } as Pick<Request, "params">;
 
     const postModel: Pick<Model<PostStructure>, "findOneAndDelete"> = {
@@ -97,7 +97,7 @@ describe("Given the deletePost method of PostController", () => {
       }),
     };
 
-    test("Then it should call the received next method with 404 'Post not found' error", async () => {
+    test("Then it should call the received next function with 404 'Post not found' error", async () => {
       const error = new ServerError(404, "Post not found");
       const postController = new PostController(
         postModel as Model<PostStructure>,
