@@ -6,8 +6,14 @@ const config: Config = {
   rootDir: "src",
   resolver: "ts-jest-resolver",
   coverageDirectory: "../coverage",
-  coverageProvider: "v8",
-  collectCoverageFrom: ["**/*.ts", "!**/*.d.ts", "!index.ts"],
+  collectCoverageFrom: [
+    "**/*.ts",
+    "!**/*.d.ts",
+    "!index.ts",
+    "!**/types.ts",
+    "!database/connectToDatabase.ts",
+    "!server/startServer.ts",
+  ],
   ...createDefaultPreset(),
 };
 
